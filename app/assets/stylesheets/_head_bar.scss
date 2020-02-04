@@ -1,0 +1,39 @@
+$header-height: 60px;
+
+.header-menu{
+  // background-color: gray
+  height: $header-height;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &__left-box{
+    background-color: #555;
+    height: $header-height;
+    width: calc(100% / 3);
+    &__user-name{
+      text-align: left;
+      padding-left: 50px;
+      line-height: $header-height;
+    }
+  }
+  &__center-box{
+    background-color: #999;
+    height: $header-height;
+    width: calc(100% / 3);
+    &__current-location{
+      text-align: center;
+      line-height: $header-height;
+    }
+  }
+  &__right-box{
+    background-color: #DDD;
+    height: $header-height;
+    width: calc(100% / 3);
+    &__config-menu{
+      text-align: right;
+      padding-right: 50px;
+      line-height: $header-height;
+    }
+  }
+}
