@@ -1,0 +1,33 @@
+.header-menu
+  .header-menu__left-box
+    .header-menu__left-box__user-name
+      = current_user.name
+      = link_to edit_user_registration_path(current_user) do
+        = icon('fas', 'cog', class: "header-menu__left-box__user-name__user-edit")
+      
+  .header-menu__center-box
+    .header-menu__center-box__current-location
+      
+  .header-menu__right-box
+    .header-menu__right-box__config-menu
+      = link_to "Project作成",  new_project_path
+
+
+
+.main-contents
+  .main-contents__projects
+    - @projects.each do |project|
+      = render partial: "project", locals: { project: project }
+
+
+
+
+
+
+
+
+
+-# %h1 トップページ
+-# -# = link_to "投稿ページ",  new_project_path
+-# - @projects.each do |project|
+-#   = render partial: "project", locals: { project: project }
